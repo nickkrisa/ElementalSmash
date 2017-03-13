@@ -460,7 +460,8 @@ PlayerSettings:
   XboxOneAllowedProductIds: []
   XboxOnePersistentLocalStorageSize: 0
   vrEditorSettings: {}
-  cloudServicesEnabled: {}
+  cloudServicesEnabled:
+    UNet: 1
   cloudProjectId: 4246cb58-9906-47c7-8659-6c127865acd6
   projectName: elemental-smash
   organizationId: mototk
