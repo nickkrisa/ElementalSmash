@@ -103,9 +103,11 @@ GameObject:
   - component: {fileID: 259867583}
   - component: {fileID: 259867586}
   - component: {fileID: 259867587}
+  - component: {fileID: 259867588}
+  - component: {fileID: 259867589}
   m_Layer: 0
   m_Name: Character_Test
-  m_TagString: Untagged
+  m_TagString: Character
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -203,11 +205,34 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1d54ba89c6974fd41b47de01499e079b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &259867588
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 259867582}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 068c63794ae17ba408672a198a4d0ae5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
   userInputBool: 1
   horizSpeed: 20
-  maxCharacterHorizVelocity: 10
-  numOfJumps: 2
+  maxCharacterHorizVelocity: 15
+  numOfJumps: 3
   vertJumpSpeed: 250
+--- !u!114 &259867589
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 259867582}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 02fcf7144f5cec14c92cd07605c10334, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  initialHealth: 100
 --- !u!1 &873251387
 GameObject:
   m_ObjectHideFlags: 0
@@ -386,9 +411,10 @@ GameObject:
   - component: {fileID: 1174064674}
   - component: {fileID: 1174064673}
   - component: {fileID: 1174064672}
+  - component: {fileID: 1174064677}
   m_Layer: 0
   m_Name: Character_Dummy
-  m_TagString: Untagged
+  m_TagString: Character
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -404,11 +430,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1d54ba89c6974fd41b47de01499e079b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  userInputBool: 0
-  horizSpeed: 0
-  maxCharacterHorizVelocity: 0
-  numOfJumps: 0
-  vertJumpSpeed: 0
 --- !u!212 &1174064673
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -491,3 +512,19 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1174064677
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1174064671}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 068c63794ae17ba408672a198a4d0ae5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  userInputBool: 0
+  horizSpeed: 0
+  maxCharacterHorizVelocity: 0
+  numOfJumps: 0
+  vertJumpSpeed: 0
