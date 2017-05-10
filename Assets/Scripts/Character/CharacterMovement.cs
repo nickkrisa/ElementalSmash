@@ -14,17 +14,12 @@ public class CharacterMovement : MonoBehaviour {
 	private bool hasPhysicsJump;
 
 	private Rigidbody2D rb2d;
-	private Animator animator;
-
-	private BoxCollider2D boxCollider;
 
 	private float horizInput = 0;
 	private float vertInput = 0;
 
 	private void Start () {
-		animator = GetComponent<Animator>();
-		boxCollider = GetComponent<BoxCollider2D> ();
-		rb2d = gameObject.GetComponent<Rigidbody2D> ();
+		rb2d = GetComponent<Rigidbody2D> ();
 	}
 
 	private void Update () {
