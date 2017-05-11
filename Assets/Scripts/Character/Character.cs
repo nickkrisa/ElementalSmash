@@ -19,19 +19,19 @@ public class Character : MonoBehaviour{
 
 	}
 
-	void OnCollisionEnter2D(Collision2D other){
-		
-	}
-
-	void OnCollisionExit2D(Collision2D other){
-
-	}
-
-	void OnTriggerEnter2D(Collider2D other){
-		
-	}
-
-	void OnTriggerExit2D(Collider2D other){
-		
-	}
+//	void OnCollisionEnter2D(Collision2D other){
+//		Debug.Log ("OnCollisionEnter2D");
+//	}
+//
+//	void OnCollisionExit2D(Collision2D other){
+//		Debug.Log ("OnCollisionExit2D");
+//	}
+//
+//	void OnTriggerEnter2D(Collider2D other){
+//		Debug.Log ("OnTriggerEnter2D");
+//	}
+//
+//	void OnTriggerExit2D(Collider2D other){
+//		Debug.Log ("OnTriggerExit2D");
+//	}
 }

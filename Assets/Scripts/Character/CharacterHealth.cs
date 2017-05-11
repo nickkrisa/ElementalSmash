@@ -2,12 +2,12 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class CharacterHealth : MonoBehaviour {
+public class CharacterHealth : MonoBehaviour, ICharacterStat {
 
 	public float initialHealth;
 
 	private CharacterDefense characterDefense;
-	private float curHealth;
+	public float curHealth;
 
 	// Use this for initialization
 	void Start () {
@@ -24,14 +24,14 @@ public class CharacterHealth : MonoBehaviour {
 	}
 
 	//Will return true if inclicted damage killed character
-	public bool inflictDamage(float damage){
+	public float decreaseStat(float damage){
 		float adjustedDamage = adjustDamage (damage);
 		curHealth -= adjustedDamage;
-		return isCharacterDead ();
+		return curHealth;
 	}
 
 	private float adjustDamage(float damage){
-		return damage - characterDefense.getDefense();
+		return damage - characterDefense.getStat();
 	}
 
 	private bool isCharacterDead(){
@@ -40,7 +40,12 @@ public class CharacterHealth : MonoBehaviour {
 		}
 		return false;
 	}
-	public void addHealth(float hp){
+	public float increaseStat(float hp){
 		curHealth += hp;
+		return curHealth;
+	}
+
+	public float getStat(){
+		return this.curHealth;
 	}
 }
