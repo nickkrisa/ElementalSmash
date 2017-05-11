@@ -28,6 +28,7 @@ GameObject:
   - component: {fileID: 114488438953881832}
   - component: {fileID: 114919357315917372}
   - component: {fileID: 95414544106965822}
+  - component: {fileID: 114707582238940926}
   m_Layer: 0
   m_Name: AirCharacter
   m_TagString: Character
@@ -71,8 +72,8 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1282508285933334}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 2.95, y: 2.32, z: 0}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 1.8298813, y: -0.7656727, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4363231856732408}
@@ -218,6 +219,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   initialHealth: 100
   curHealth: 0
+--- !u!114 &114707582238940926
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1282508285933334}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 36a00a9d29323094f9256202ca7dbbb3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fallenDistance: 125
 --- !u!114 &114906081538052958
 MonoBehaviour:
   m_ObjectHideFlags: 1

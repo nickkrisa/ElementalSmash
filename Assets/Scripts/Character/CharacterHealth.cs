@@ -18,8 +18,8 @@ public class CharacterHealth : MonoBehaviour, ICharacterStat {
 	// Update is called once per frame
 	void Update () {
 		if (isCharacterDead ()) {
-			//Character is dead
-			Debug.Log("Character is dead");
+			gameObject.SetActive (false);
+			Debug.Log("Character " + gameObject.name +" is dead.");
 		}
 	}
 
@@ -34,7 +34,7 @@ public class CharacterHealth : MonoBehaviour, ICharacterStat {
 		return damage - characterDefense.getStat();
 	}
 
-	private bool isCharacterDead(){
+	public bool isCharacterDead(){
 		if (curHealth < 0) {
 			return true;
 		}

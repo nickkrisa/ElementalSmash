@@ -45,6 +45,7 @@ GameObject:
   - component: {fileID: 114459184577085548}
   - component: {fileID: 114634790354859024}
   - component: {fileID: 95829050565268218}
+  - component: {fileID: 114200472858843454}
   m_Layer: 0
   m_Name: WaterCharacter
   m_TagString: Character
@@ -71,14 +72,14 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1613996974495900}
-  m_LocalRotation: {x: 0, y: 0.99735904, z: -0, w: -0.07262893}
-  m_LocalPosition: {x: -2, y: 2.32, z: 0}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -5.7701187, y: -0.7656727, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4742456804028896}
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 188.33, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!50 &50590763426871418
 Rigidbody2D:
   serializedVersion: 4
@@ -166,6 +167,18 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
+--- !u!114 &114200472858843454
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1613996974495900}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 36a00a9d29323094f9256202ca7dbbb3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fallenDistance: 125
 --- !u!114 &114406880529561074
 MonoBehaviour:
   m_ObjectHideFlags: 1
