@@ -25,4 +25,7 @@ EditorBuildSettings:
     guid: b3eeaa2769b9f7e42acada3fa5fcb106
   - enabled: 1
     path: Assets/Scenes/LocalMpSelectScene.unity
+    guid: 0d67c2badf2dac947b40bfb5f5a5b280
+  - enabled: 1
+    path: Assets/Scenes/BattleGround.unity
     guid: 00000000000000000000000000000000
