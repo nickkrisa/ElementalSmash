@@ -16,30 +16,23 @@ public class CharacterMovement : MonoBehaviour {
 	private Rigidbody2D rb2d;
 
 	private float horizInput = 0;
+	private float lookDirection = -1;
 	private float vertInput = 0;
+
+	private Animator playerAnimator;
 
 	private void Start () {
 		rb2d = GetComponent<Rigidbody2D> ();
+		playerAnimator = GetComponent<Animator> ();
 	}
 
 	private void Update () {
 		handleUserInputLogic ();
+		playerAnimator.SetFloat ("Walking", rb2d.velocity.magnitude);
 	}
 
 	void OnCollisionEnter2D(Collision2D other){
 		managePlatformLogic (other.gameObject);
-	}
-
-	void OnCollisionExit2D(Collision2D other){
-
-	}
-
-	void OnTriggerEnter2D(Collider2D other){
-
-	}
-
-	void OnTriggerExit2D(Collider2D other){
-
 	}
 
 	void FixedUpdate(){
@@ -53,6 +46,7 @@ public class CharacterMovement : MonoBehaviour {
 	private void handleUserInputLogic(){
 		if (userInputBool) {
 			horizInput = Input.GetAxisRaw ("Horizontal");
+			updateCharacterDirection (horizInput);
 			vertInput = Input.GetAxisRaw ("Vertical");
 			updateJump (vertInput);
 		}
@@ -71,6 +65,20 @@ public class CharacterMovement : MonoBehaviour {
 			curJumpsLeft--;
 		}
 		prevVertInput = curVertInput;
+	}
+
+	private void updateCharacterDirection(float horizInput){
+		if (horizInput != 0) {
+			if (horizInput != lookDirection) {
+				lookDirection = horizInput;
+				float degrees = 0;
+				if (lookDirection == 1) {
+					degrees = 180;
+				}
+				transform.rotation = Quaternion.Euler (0,degrees,0);
+			}
+		}
+//		
 	}
 
 	private float getVertForce(Rigidbody2D rgbd){
