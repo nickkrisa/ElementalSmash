@@ -81,15 +81,15 @@ public class MenuScript : MonoBehaviour
     }
     public void BeginPractice()
     {
-        SceneManager.LoadScene(0);//not sure what scene yet...use dropdown i think
+        SceneManager.LoadScene(6);//not sure what scene yet...use dropdown i think. default is battleground since no others
     }
     public void BeginVsAi()
     {
-        SceneManager.LoadScene(0);//not sure what scene yet...use dropdown i think
+        SceneManager.LoadScene(6);//not sure what scene yet...use dropdown i think. default is battleground since no others
     }
     public void BeginMp()
     {
-        SceneManager.LoadScene(0);//not sure what scene yet...use dropdown i think
+        SceneManager.LoadScene(6);//not sure what scene yet...use dropdown i think. default is battleground since no others
     }
 }
 
