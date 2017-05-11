@@ -9,6 +9,7 @@ public class CameraControl : MonoBehaviour {
     private Vector3 targetPosition;
 
     public float smoothing;
+    public float zoomOut;
 
     public bool followTarget;
 
@@ -22,7 +23,7 @@ public class CameraControl : MonoBehaviour {
     {
         if (followTarget)
         {
-            targetPosition = new Vector3(target.transform.position.x, target.transform.position.y, -1);
+            targetPosition = new Vector3(target.transform.position.x, target.transform.position.y, -zoomOut);
 
             if (target.transform.localScale.x > 0f)
             {
