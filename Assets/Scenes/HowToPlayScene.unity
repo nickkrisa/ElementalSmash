@@ -175,7 +175,13 @@ MonoBehaviour:
     m_HorizontalOverflow: 1
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: //howtoplay...
+  m_Text: 'Player 1 moves with WASD and attacks with ''x''
+
+    Player 2 moves with the arrow keys and attacks with ''.''
+
+    Items spawn with helpful or harmful stats. Red items are harmful.
+
+    Last man standing wins!'
 --- !u!222 &106385911
 CanvasRenderer:
   m_ObjectHideFlags: 0
