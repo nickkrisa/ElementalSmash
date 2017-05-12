@@ -1,0 +1,78 @@
+Initialize engine version: 5.6.0f3 (497a0f351392)
+GfxDevice: creating device client; threaded=1
+Direct3D:
+    Version:  Direct3D 11.0 [level 11.0]
+    Renderer: Intel(R) HD Graphics 4000 (ID=0x166)
+    Vendor:   Intel
+    VRAM:     912 MB
+    Driver:   10.18.10.4358
+Begin MonoManager ReloadAssembly
+Platform assembly: C:\Users\My pc\elemental-smash\Elemental Smash Win_Data\Managed\UnityEngine.dll (this message is harmless)
+Loading C:\Users\My pc\elemental-smash\Elemental Smash Win_Data\Managed\UnityEngine.dll into Unity Child Domain
+Platform assembly: C:\Users\My pc\elemental-smash\Elemental Smash Win_Data\Managed\Assembly-CSharp.dll (this message is harmless)
+Loading C:\Users\My pc\elemental-smash\Elemental Smash Win_Data\Managed\Assembly-CSharp.dll into Unity Child Domain
+Platform assembly: C:\Users\My pc\elemental-smash\Elemental Smash Win_Data\Managed\UnityEngine.UI.dll (this message is harmless)
+Loading C:\Users\My pc\elemental-smash\Elemental Smash Win_Data\Managed\UnityEngine.UI.dll into Unity Child Domain
+Platform assembly: C:\Users\My pc\elemental-smash\Elemental Smash Win_Data\Managed\UnityEngine.Networking.dll (this message is harmless)
+Loading C:\Users\My pc\elemental-smash\Elemental Smash Win_Data\Managed\UnityEngine.Networking.dll into Unity Child Domain
+Platform assembly: C:\Users\My pc\elemental-smash\Elemental Smash Win_Data\Managed\UnityEngine.Analytics.dll (this message is harmless)
+Loading C:\Users\My pc\elemental-smash\Elemental Smash Win_Data\Managed\UnityEngine.Analytics.dll into Unity Child Domain
+- Completed reload, in  0.028 seconds
+Platform assembly: C:\Users\My pc\elemental-smash\Elemental Smash Win_Data\Managed\System.Core.dll (this message is harmless)
+Platform assembly: C:\Users\My pc\elemental-smash\Elemental Smash Win_Data\Managed\System.dll (this message is harmless)
+desktop: 1366x768 60Hz; virtual: 1366x768 at 0,0
+<RI> Initializing input.
+<RI> Input initialized.
+<RI> Initialized touch support.
+UnloadTime: 1.465179 ms
+NullReferenceException: Object reference not set to an instance of an object
+  at MenuScript.Start () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+Unloading 6 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 8.399021 ms
+
+Unloading 4 unused Assets to reduce memory usage. Loaded Objects now: 464.
+Total: 2.202900 ms (FindLiveObjects: 0.051726 ms CreateObjectMapping: 0.018063 ms MarkObjects: 0.353465 ms  DeleteObjects: 1.778413 ms)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at MenuScript.Start () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+Unloading 3 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 0.706931 ms
+
+Unloading 11 unused Assets to reduce memory usage. Loaded Objects now: 673.
+Total: 0.443782 ms (FindLiveObjects: 0.057474 ms CreateObjectMapping: 0.039821 ms MarkObjects: 0.312002 ms  DeleteObjects: 0.033663 ms)
+
+Character AirCharacter is dead.
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Unloading 3 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 0.734026 ms
+
+Unloading 123 unused Assets to reduce memory usage. Loaded Objects now: 281.
+Total: 4.658277 ms (FindLiveObjects: 0.048853 ms CreateObjectMapping: 0.030379 ms MarkObjects: 0.211422 ms  DeleteObjects: 4.366390 ms)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at MenuScript.Start () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+Unloading 2 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 0.384666 ms
+
+Unloading 1 unused Assets to reduce memory usage. Loaded Objects now: 325.
+Total: 0.265612 ms (FindLiveObjects: 0.022989 ms CreateObjectMapping: 0.016010 ms MarkObjects: 0.221275 ms  DeleteObjects: 0.004926 ms)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at MenuScript.Start () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+Setting up 2 worker threads for Enlighten.
+  Thread -> id: 35e4 -> priority: 1 
+  Thread -> id: f48 -> priority: 1 
