@@ -42,13 +42,11 @@ public class CharacterMovement : MonoBehaviour {
 			horizontal = "Horizontal";
 			vertical = "Vertical";
 			attackController.attackKey = "q";
-			attackController.specialKey = "e";
 			cameraScript.target1 = this.gameObject;
 		} else if (thisPlayerIndex == player2Index) {
 			horizontal = "Horizontal2";
 			vertical = "Vertical2";
 			attackController.attackKey = ".";
-			attackController.specialKey = "/";
 			cameraScript.target2 = this.gameObject;
 		} 
 		else if (thisPlayerIndex == aiIndex) {

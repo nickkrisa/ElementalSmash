@@ -5,14 +5,12 @@ using UnityEngine;
 public class CharacterAttack : MonoBehaviour, ICharacterStat {
 
 	public string attackKey;
-	public string specialKey;
 
 	public float initialAttack;
 
 	private float attack;
 
 	private bool attacking = false;
-	private bool specialAttacking = false;
 	private float attackTimer = 0;
 	public float attackCoolDown = 0.3f;
 	public float specialCoolDown = 0.5f;
@@ -30,17 +28,9 @@ public class CharacterAttack : MonoBehaviour, ICharacterStat {
 	}
 
 	void Update(){
-		if (Input.GetKeyDown (attackKey) && !attacking && !specialAttacking) {
+		if (Input.GetKeyDown (attackKey) && !attacking) {
 			attacking = true;
 			attackTimer = attackCoolDown;
-
-			attackZone.enabled = true;
-		}
-
-
-		if (Input.GetKeyDown (specialKey) && !attacking && !specialAttacking) {
-			specialAttacking = true;
-			attackTimer = specialCoolDown;
 
 			attackZone.enabled = true;
 		}
@@ -54,17 +44,6 @@ public class CharacterAttack : MonoBehaviour, ICharacterStat {
 			}
 
 			playerAnimator.SetBool ("Attacking", attacking);
-		}
-
-		if (specialAttacking) {
-			if (attackTimer > 0) {
-				attackTimer -= Time.deltaTime;
-			} else {
-				attacking = false;
-				attackZone.enabled = false;
-			}
-
-			playerAnimator.SetBool ("Special", specialAttacking);
 		}
 			
 	}
