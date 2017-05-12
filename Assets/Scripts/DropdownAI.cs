@@ -21,6 +21,8 @@ public class DropdownAI : MonoBehaviour
         {
             selectedFighter.color = Color.white;
         }
+        PlayerPrefs.SetInt("FighterTypeAI", index - 1);
+        PlayerPrefs.SetInt("FighterType2", 5); //sets p2 outside of the bounds so no player controls are present.
     }
 
 
