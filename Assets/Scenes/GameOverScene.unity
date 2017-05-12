@@ -523,7 +523,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 1
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: //Player who wins!
+  m_Text: 
 --- !u!222 &1045990816
 CanvasRenderer:
   m_ObjectHideFlags: 0

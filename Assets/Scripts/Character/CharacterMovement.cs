@@ -29,28 +29,32 @@ public class CharacterMovement : MonoBehaviour {
 	private Rigidbody2D rb2d;
 	private CharacterAttack attackController;
 	private GameObject otherCharacter;
+	private CameraControl cameraScript;
 
 	private void Start () {
 		attackController = GetComponent<CharacterAttack> ();
 		player1Index = PlayerPrefs.GetInt ("FighterType1");
 		player2Index = PlayerPrefs.GetInt ("FighterType2");
 		aiIndex = PlayerPrefs.GetInt ("FighterTypeAI");
+		cameraScript = Camera.main.GetComponent<CameraControl> ();
 
 		if (thisPlayerIndex == player1Index) {
 			horizontal = "Horizontal";
 			vertical = "Vertical";
 			attackController.attackKey = "q";
 			attackController.specialKey = "e";
+			cameraScript.target1 = this.gameObject;
 		} else if (thisPlayerIndex == player2Index) {
 			horizontal = "Horizontal2";
 			vertical = "Vertical2";
 			attackController.attackKey = ".";
 			attackController.specialKey = "/";
+			cameraScript.target2 = this.gameObject;
 		} 
 		else if (thisPlayerIndex == aiIndex) {
 			isAIMove = true;
-			attackController.isAIAttack = true;
 			GetOtherPlayer ();
+			cameraScript.target2 = this.gameObject;
 		} 
 		else {
 			Destroy (this.gameObject);
@@ -61,12 +65,13 @@ public class CharacterMovement : MonoBehaviour {
 	}
 
 	private void Update () {
-		handleUserInputLogic ();
-		playerAnimator.SetFloat ("Walking", rb2d.velocity.magnitude);
-
 		if (isAIMove) {
 			AIMovement ();
+		} else {
+			handleUserInputLogic ();
 		}
+		playerAnimator.SetFloat ("Walking", rb2d.velocity.magnitude);
+
 	}
 
 	void OnCollisionEnter2D(Collision2D other){
@@ -143,7 +148,7 @@ public class CharacterMovement : MonoBehaviour {
 		}
 
 		rb2d.AddForce (new Vector2 (horizForce, 0));
-		rb2d.velocity = new Vector2 (Mathf.Clamp (rb2d.velocity.x, -maxCharacterHorizVelocity, maxCharacterHorizVelocity), rb2d.velocity.y);
+		rb2d.velocity = new Vector2 (Mathf.Clamp (rb2d.velocity.x, -2, 2), rb2d.velocity.y);
 	}
 
 	private void GetOtherPlayer() {

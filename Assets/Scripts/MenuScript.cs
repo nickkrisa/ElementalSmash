@@ -85,7 +85,7 @@ public class MenuScript : MonoBehaviour
     }
     public void BeginVsAi()
     {
-        SceneManager.LoadScene(6);//not sure what scene yet...use dropdown i think. default is battleground since no others
+        SceneManager.LoadScene(8);//not sure what scene yet...use dropdown i think. default is battleground since no others
     }
     public void BeginMp()
     {

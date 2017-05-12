@@ -10,7 +10,6 @@ public class CharacterAttack : MonoBehaviour, ICharacterStat {
 	public float initialAttack;
 
 	private float attack;
-	public bool isAIAttack = false;
 
 	private bool attacking = false;
 	private bool specialAttacking = false;
@@ -67,6 +66,7 @@ public class CharacterAttack : MonoBehaviour, ICharacterStat {
 
 			playerAnimator.SetBool ("Special", specialAttacking);
 		}
+			
 	}
 
 	public float increaseStat(float attackIncreaseAmount){
@@ -82,4 +82,5 @@ public class CharacterAttack : MonoBehaviour, ICharacterStat {
 	public float getStat(){
 		return this.attack;
 	}
+		
 }

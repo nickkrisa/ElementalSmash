@@ -3,7 +3,9 @@ using System.Collections;
 
 public class CameraControl : MonoBehaviour {
 
-    public GameObject target;
+    public GameObject target1;
+	public GameObject target2;
+
     public float followAhead;
 
     private Vector3 targetPosition;
@@ -23,8 +25,9 @@ public class CameraControl : MonoBehaviour {
     {
         if (followTarget)
         {
-            targetPosition = new Vector3(target.transform.position.x, target.transform.position.y, -zoomOut);
+			targetPosition = new Vector3((target1.transform.position.x + target2.transform.position.x)/2 , (target1.transform.position.y + target2.transform.position.y)/2 , -zoomOut);
 
+			/*
             if (target.transform.localScale.x > 0f)
             {
                 targetPosition = new Vector3(targetPosition.x + followAhead, targetPosition.y, targetPosition.z);
@@ -33,6 +36,7 @@ public class CameraControl : MonoBehaviour {
             {
                 targetPosition = new Vector3(targetPosition.x - followAhead, targetPosition.y, targetPosition.z);
             }
+			*/
 
             transform.position = Vector3.Lerp(transform.position, targetPosition, smoothing * Time.deltaTime);
         }
