@@ -13,6 +13,7 @@ public class DropdownPlayer1 : MonoBehaviour
     public void Dropdown_IndexChanged(int index)
     {
         selectedFighter.text = fighters[index];
+        
         if (index == 0)
         {
             selectedFighter.color = Color.red;

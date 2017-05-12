@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class CharacterHealth : MonoBehaviour, ICharacterStat {
 
@@ -20,6 +21,8 @@ public class CharacterHealth : MonoBehaviour, ICharacterStat {
 		if (isCharacterDead ()) {
 			gameObject.SetActive (false);
 			Debug.Log("Character " + gameObject.name +" is dead.");
+            //when one player dies, the other wins, and game goes to endscene
+            SceneManager.LoadScene(7);
 		}
 	}
 
