@@ -10,6 +10,7 @@ public class CharacterAttack : MonoBehaviour, ICharacterStat {
 	public float initialAttack;
 
 	private float attack;
+	public bool isAIAttack = false;
 
 	private bool attacking = false;
 	private bool specialAttacking = false;
@@ -37,13 +38,13 @@ public class CharacterAttack : MonoBehaviour, ICharacterStat {
 			attackZone.enabled = true;
 		}
 
-		/*
+
 		if (Input.GetKeyDown (specialKey) && !attacking && !specialAttacking) {
 			specialAttacking = true;
 			attackTimer = specialCoolDown;
 
 			attackZone.enabled = true;
-		}*/
+		}
 
 		if (attacking) {
 			if (attackTimer > 0) {

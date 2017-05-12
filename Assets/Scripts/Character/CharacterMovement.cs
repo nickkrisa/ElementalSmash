@@ -10,8 +10,10 @@ public class CharacterMovement : MonoBehaviour {
 	public int thisPlayerIndex;
 	private int player1Index;
 	private int player2Index;
+	private int aiIndex;
 	private string horizontal;
 	private string vertical; 
+	public bool isAIMove = false;
 
 	public int numOfJumps;
 	public float vertJumpSpeed;
@@ -26,21 +28,31 @@ public class CharacterMovement : MonoBehaviour {
 	private Animator playerAnimator;
 	private Rigidbody2D rb2d;
 	private CharacterAttack attackController;
+	private GameObject otherCharacter;
 
 	private void Start () {
 		attackController = GetComponent<CharacterAttack> ();
 		player1Index = PlayerPrefs.GetInt ("FighterType1");
 		player2Index = PlayerPrefs.GetInt ("FighterType2");
+		aiIndex = PlayerPrefs.GetInt ("FighterTypeAI");
 
 		if (thisPlayerIndex == player1Index) {
 			horizontal = "Horizontal";
 			vertical = "Vertical";
 			attackController.attackKey = "q";
+			attackController.specialKey = "e";
 		} else if (thisPlayerIndex == player2Index) {
 			horizontal = "Horizontal2";
 			vertical = "Vertical2";
-			attackController.attackKey = "/";
-		} else {
+			attackController.attackKey = ".";
+			attackController.specialKey = "/";
+		} 
+		else if (thisPlayerIndex == aiIndex) {
+			isAIMove = true;
+			attackController.isAIAttack = true;
+			GetOtherPlayer ();
+		} 
+		else {
 			Destroy (this.gameObject);
 		}
 
@@ -51,6 +63,10 @@ public class CharacterMovement : MonoBehaviour {
 	private void Update () {
 		handleUserInputLogic ();
 		playerAnimator.SetFloat ("Walking", rb2d.velocity.magnitude);
+
+		if (isAIMove) {
+			AIMovement ();
+		}
 	}
 
 	void OnCollisionEnter2D(Collision2D other){
@@ -113,5 +129,35 @@ public class CharacterMovement : MonoBehaviour {
 	}
 	private float getHorizForce(){
 		return horizSpeed * horizInput;
+	}
+
+	private void AIMovement() {
+		Vector3 otherLocation = otherCharacter.transform.position;
+		float horizForce;
+	
+		float horizDiff = otherLocation.x - transform.position.x;
+		if (horizDiff > 0) {
+			horizForce = horizSpeed;
+		} else  {
+			horizForce = horizSpeed * -1;
+		}
+
+		rb2d.AddForce (new Vector2 (horizForce, 0));
+		rb2d.velocity = new Vector2 (Mathf.Clamp (rb2d.velocity.x, -maxCharacterHorizVelocity, maxCharacterHorizVelocity), rb2d.velocity.y);
+	}
+
+	private void GetOtherPlayer() {
+		if (player1Index == 0) {
+			otherCharacter = GameObject.Find ("FlameCharacter");
+		}
+		else if (player1Index == 1) {
+			otherCharacter = GameObject.Find ("AirCharacter");
+		}
+		else if (player1Index == 2) {
+			otherCharacter = GameObject.Find ("EarthCharacter");
+		}
+		else {
+			otherCharacter = GameObject.Find ("WaterCharacter");
+		}
 	}
 }
