@@ -22,6 +22,7 @@ public class CharacterHealth : MonoBehaviour, ICharacterStat {
 			gameObject.SetActive (false);
 			Debug.Log("Character " + gameObject.name +" is dead.");
             //when one player dies, the other wins, and game goes to endscene
+            PlayerPrefs.SetInt("DeadGuy", GetComponent<CharacterMovement>().thisPlayerIndex);
             SceneManager.LoadScene(7);
 		}
 	}

@@ -22,6 +22,7 @@ public class DropdownPlayer2 : MonoBehaviour
             selectedFighter.color = Color.white;
         }
 		PlayerPrefs.SetInt ("FighterType2", index - 1);
+        PlayerPrefs.SetInt("FighterTypeAI", 5); //sets AI outside of the bounds so the AI wont show up.
     }
 
 
