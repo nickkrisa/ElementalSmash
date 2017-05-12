@@ -227,8 +227,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   attackKey: x
+  specialKey: 
   initialAttack: 15
   attackCoolDown: 0.3
+  specialCoolDown: 0.5
   attackZone: {fileID: 61679542957598014}
 --- !u!114 &114717841684422434
 MonoBehaviour:
@@ -255,6 +257,7 @@ MonoBehaviour:
   userInputBool: 1
   horizSpeed: 20
   maxCharacterHorizVelocity: 15
+  thisPlayerIndex: 3
   numOfJumps: 3
   vertJumpSpeed: 250
 --- !u!212 &212883097695467754

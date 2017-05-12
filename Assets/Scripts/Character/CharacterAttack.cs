@@ -5,14 +5,17 @@ using UnityEngine;
 public class CharacterAttack : MonoBehaviour, ICharacterStat {
 
 	public string attackKey;
+	public string specialKey;
 
 	public float initialAttack;
 
 	private float attack;
 
 	private bool attacking = false;
+	private bool specialAttacking = false;
 	private float attackTimer = 0;
 	public float attackCoolDown = 0.3f;
+	public float specialCoolDown = 0.5f;
 
 	public Collider2D attackZone;
 
@@ -27,12 +30,20 @@ public class CharacterAttack : MonoBehaviour, ICharacterStat {
 	}
 
 	void Update(){
-		if (Input.GetKeyDown (attackKey) && !attacking) {
+		if (Input.GetKeyDown (attackKey) && !attacking && !specialAttacking) {
 			attacking = true;
 			attackTimer = attackCoolDown;
 
 			attackZone.enabled = true;
 		}
+
+		/*
+		if (Input.GetKeyDown (specialKey) && !attacking && !specialAttacking) {
+			specialAttacking = true;
+			attackTimer = specialCoolDown;
+
+			attackZone.enabled = true;
+		}*/
 
 		if (attacking) {
 			if (attackTimer > 0) {
@@ -41,9 +52,20 @@ public class CharacterAttack : MonoBehaviour, ICharacterStat {
 				attacking = false;
 				attackZone.enabled = false;
 			}
+
+			playerAnimator.SetBool ("Attacking", attacking);
 		}
 
-		playerAnimator.SetBool ("Attacking", attacking);
+		if (specialAttacking) {
+			if (attackTimer > 0) {
+				attackTimer -= Time.deltaTime;
+			} else {
+				attacking = false;
+				attackZone.enabled = false;
+			}
+
+			playerAnimator.SetBool ("Special", specialAttacking);
+		}
 	}
 
 	public float increaseStat(float attackIncreaseAmount){

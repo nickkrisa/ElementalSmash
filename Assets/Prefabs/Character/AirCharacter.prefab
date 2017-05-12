@@ -23,7 +23,7 @@ GameObject:
   - component: {fileID: 50276259264702274}
   - component: {fileID: 212298107798267008}
   - component: {fileID: 114562585971240564}
-  - component: {fileID: 114435679841438108}
+  - component: {fileID: 114715451661648618}
   - component: {fileID: 114673520083156094}
   - component: {fileID: 114488438953881832}
   - component: {fileID: 114919357315917372}
@@ -167,22 +167,6 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
---- !u!114 &114435679841438108
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1282508285933334}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 068c63794ae17ba408672a198a4d0ae5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  userInputBool: 1
-  horizSpeed: 20
-  maxCharacterHorizVelocity: 15
-  numOfJumps: 3
-  vertJumpSpeed: 250
 --- !u!114 &114488438953881832
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -231,6 +215,23 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fallenDistance: 125
+--- !u!114 &114715451661648618
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1282508285933334}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 068c63794ae17ba408672a198a4d0ae5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  userInputBool: 1
+  horizSpeed: 20
+  maxCharacterHorizVelocity: 15
+  thisPlayerIndex: 1
+  numOfJumps: 3
+  vertJumpSpeed: 250
 --- !u!114 &114906081538052958
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -254,8 +255,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   attackKey: x
+  specialKey: 
   initialAttack: 15
   attackCoolDown: 0.3
+  specialCoolDown: 0.5
   attackZone: {fileID: 61690092737372876}
 --- !u!212 &212298107798267008
 SpriteRenderer:
@@ -294,6 +297,6 @@ SpriteRenderer:
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 4.1675, y: 4.1675}
+  m_Size: {x: 4.15, y: 4.15}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0

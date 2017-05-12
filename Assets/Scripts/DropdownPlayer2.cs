@@ -21,6 +21,7 @@ public class DropdownPlayer2 : MonoBehaviour
         {
             selectedFighter.color = Color.white;
         }
+		PlayerPrefs.SetInt ("FighterType2", index - 1);
     }
 
 

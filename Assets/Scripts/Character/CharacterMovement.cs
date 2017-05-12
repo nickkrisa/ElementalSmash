@@ -7,21 +7,43 @@ public class CharacterMovement : MonoBehaviour {
 	public float horizSpeed;
 	public float maxCharacterHorizVelocity;
 
+	public int thisPlayerIndex;
+	private int player1Index;
+	private int player2Index;
+	private string horizontal;
+	private string vertical; 
+
 	public int numOfJumps;
 	public float vertJumpSpeed;
 	private int curJumpsLeft;
 	private float prevVertInput;
 	private bool hasPhysicsJump;
 
-	private Rigidbody2D rb2d;
-
 	private float horizInput = 0;
 	private float lookDirection = -1;
 	private float vertInput = 0;
 
 	private Animator playerAnimator;
+	private Rigidbody2D rb2d;
+	private CharacterAttack attackController;
 
 	private void Start () {
+		attackController = GetComponent<CharacterAttack> ();
+		player1Index = PlayerPrefs.GetInt ("FighterType1");
+		player2Index = PlayerPrefs.GetInt ("FighterType2");
+
+		if (thisPlayerIndex == player1Index) {
+			horizontal = "Horizontal";
+			vertical = "Vertical";
+			attackController.attackKey = "q";
+		} else if (thisPlayerIndex == player2Index) {
+			horizontal = "Horizontal2";
+			vertical = "Vertical2";
+			attackController.attackKey = "/";
+		} else {
+			Destroy (this.gameObject);
+		}
+
 		rb2d = GetComponent<Rigidbody2D> ();
 		playerAnimator = GetComponent<Animator> ();
 	}
@@ -45,9 +67,9 @@ public class CharacterMovement : MonoBehaviour {
 
 	private void handleUserInputLogic(){
 		if (userInputBool) {
-			horizInput = Input.GetAxisRaw ("Horizontal");
+			horizInput = Input.GetAxisRaw (horizontal);
 			updateCharacterDirection (horizInput);
-			vertInput = Input.GetAxisRaw ("Vertical");
+			vertInput = Input.GetAxisRaw (vertical);
 			updateJump (vertInput);
 		}
 	}

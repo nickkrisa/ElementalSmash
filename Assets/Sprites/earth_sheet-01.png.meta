@@ -1,6 +1,6 @@
 fileFormatVersion: 2
 guid: a5f97696e4c5949ac820b75c91a74950
-timeCreated: 1494471901
+timeCreated: 1494539774
 licenseType: Pro
 TextureImporter:
   fileIDToRecycleName:
@@ -19,6 +19,7 @@ TextureImporter:
     21300024: earth_special_2
     21300026: earth_special_3
     21300028: earth_special_4
+    21300030: earth_special_5
   serializedVersion: 4
   mipmaps:
     mipMapMode: 0
@@ -97,11 +98,11 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 0
-        y: 1250.25
-        width: 416.75
-        height: 416.75
+        y: 1250
+        width: 415
+        height: 415
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       tessellationDetail: 0
@@ -110,11 +111,11 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 416
-        y: 1250.25
-        width: 416.75
-        height: 416.75
+        y: 1250
+        width: 415
+        height: 415
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       tessellationDetail: 0
@@ -123,11 +124,11 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 832
-        y: 1250.25
-        width: 416.75
-        height: 416.75
+        y: 1247
+        width: 415
+        height: 415
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       tessellationDetail: 0
@@ -136,11 +137,11 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 1248
-        y: 1250.25
-        width: 416.75
-        height: 416.75
+        y: 1250
+        width: 415
+        height: 415
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       tessellationDetail: 0
@@ -153,7 +154,7 @@ TextureImporter:
         width: 415
         height: 415
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       tessellationDetail: 0
@@ -166,7 +167,7 @@ TextureImporter:
         width: 415
         height: 415
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       tessellationDetail: 0
@@ -179,7 +180,7 @@ TextureImporter:
         width: 415
         height: 415
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       tessellationDetail: 0
@@ -192,7 +193,7 @@ TextureImporter:
         width: 416.75
         height: 416.75
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       tessellationDetail: 0
@@ -205,7 +206,7 @@ TextureImporter:
         width: 415
         height: 415
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       tessellationDetail: 0
@@ -218,7 +219,7 @@ TextureImporter:
         width: 415
         height: 415
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       tessellationDetail: 0
@@ -231,7 +232,20 @@ TextureImporter:
         width: 416.75
         height: 416.75
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: earth_special_5
+      rect:
+        serializedVersion: 2
+        x: 1248
+        y: 415
+        width: 415
+        height: 415
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       tessellationDetail: 0
@@ -244,7 +258,7 @@ TextureImporter:
         width: 415
         height: 415
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       tessellationDetail: 0
@@ -252,12 +266,12 @@ TextureImporter:
       name: earth_special_2
       rect:
         serializedVersion: 2
-        x: 416
+        x: 413
         y: 0
         width: 415
         height: 415
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       tessellationDetail: 0
@@ -270,7 +284,7 @@ TextureImporter:
         width: 415
         height: 415
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       tessellationDetail: 0
@@ -283,7 +297,7 @@ TextureImporter:
         width: 415
         height: 415
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       tessellationDetail: 0
